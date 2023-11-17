@@ -31,9 +31,40 @@ button:hover {
     background-color: #777;
 }
 
+#menuToggle {
+    display: none; /* Hide the menu toggle button by default */
+}
+
+nav {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    background-color: #333;
+    color: #fff;
+    padding-top: 60px; /* Adjust the padding based on your header's height */
+    transition: 0.3s;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
 main {
     padding: 20px;
-    margin-bottom: 60px; /* Adjust the margin based on your footer's height */
+    margin-left: 200px; /* Adjust the margin based on your nav width */
 }
 
 #articles {
@@ -79,14 +110,14 @@ footer {
 
     main {
         padding: 10px;
-        margin-bottom: 60px; /* Adjust the margin based on your footer's height */
+        margin-left: 0; /* Reset the margin for mobile */
     }
 
-    #articles {
-        margin-top: 10px;
+    #menuToggle {
+        display: inline-block; /* Show the menu toggle button for mobile */
     }
 
-    article {
-        padding: 10px;
+    nav {
+        left: 0;
     }
 }
