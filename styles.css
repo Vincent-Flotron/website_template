@@ -11,12 +11,17 @@ header {
     color: #fff;
     padding: 10px;
     display: flex;
-    justify-content: space-between; /* Align items horizontally */
-    align-items: center; /* Align items vertically */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
     margin: 0;
+    font-size: 0.75rem; /* Base font size for mobile */
 }
 
 button {
@@ -32,8 +37,8 @@ button:hover {
 }
 
 main {
-    padding: 20px;
-    margin-bottom: 60px; /* Adjust the margin based on your footer's height */
+    padding: 70px 20px 20px;
+    margin-bottom: 60px;
 }
 
 #articles {
@@ -61,32 +66,41 @@ footer {
     width: 100%;
 }
 
-/* Add this at the end of styles.css */
+footer p {
+    font-size: 0.6rem;
+}
+
 .dark-theme {
     background-color: #222;
     color: #fff;
 }
 
-@media only screen and (max-width: 600px) {
-    /* Mobile styles */
-    header {
-        padding: 10px 5px;
-    }
-
-    button {
-        padding: 5px;
+@media only screen and (min-width: 400px) {
+    /* Tablet and desktop styles */
+    header h1 {
+        font-size: 1rem; /* Increase font size for larger screens */
     }
 
     main {
-        padding: 10px;
-        margin-bottom: 60px; /* Adjust the margin based on your footer's height */
+        padding: 70px 30px 20px; /* Adjust top padding for larger screens */
     }
 
-    #articles {
-        margin-top: 10px;
+    footer p {
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    /* Tablet and desktop styles */
+    header h1 {
+        font-size: 2rem; /* Increase font size for larger screens */
     }
 
-    article {
-        padding: 10px;
+    main {
+        padding: 70px 40px 20px; /* Adjust top padding for larger screens */
+    }
+
+    footer p {
+        font-size: 1rem;
     }
 }
